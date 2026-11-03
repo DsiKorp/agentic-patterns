@@ -4,12 +4,12 @@
  */
 
 import { APICallError, generateText } from 'ai';
-import { createTracer, model } from '../helpers/index.js';
+import { model, createTracer } from '../helpers/index.js';
 
 // Función básica para verificar si el modelo está funcionando
 export async function getMessageFromModel() {
   const { text, usage } = await generateText({
-    model,
+    model: model,
     prompt: 'Responde solamente con: "OK, todo listo!"',
   });
 
@@ -20,7 +20,7 @@ export async function getMessageFromModel() {
 export async function getMessageFromModelWithTrace() {
   const tracer = createTracer('get-message-model');
   const { text, usage } = await generateText({
-    model,
+    model: model,
     prompt: 'Responde solamente con: "OK, todo listo!"',
     onStepFinish: tracer.onStepFinish,
   });
@@ -35,7 +35,7 @@ export async function getMessageFromModelWithTrace() {
 export async function getMessageFromModelFailSafe() {
   try {
     const { text, usage } = await generateText({
-      model,
+      model: model,
       prompt: 'Responde solamente con: "OK, todo listo!"',
     });
 

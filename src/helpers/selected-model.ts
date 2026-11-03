@@ -24,21 +24,30 @@ import { google } from '@ai-sdk/google';
 // npm i ollama-ai-provider-v2
 // A diferencia de los anteriores, este es un proveedor comunitario.
 import { ollama } from 'ollama-ai-provider-v2';
-///////////////////////////////////////////////////////////77
+
+// Minimax:
+// npm i @ai-sdk/minimax
+import { minimax } from '@ai-sdk/minimax';
+
 // Groq:
 //export const model = groq('openai/gpt-oss-20b');
 // export const model = groq('openai/gpt-oss-120b');
 
 // Anthropic:
-export const model = anthropic('claude-haiku-4-5');
+//export const model = anthropic('claude-haiku-4-5');
 
 // OpenAI:
 //export const model = openai('gpt-5-mini');
 
 // Gemini:
-//export const model = google('gemini-3.1-flash-lite');
+export const model = google('gemini-3.1-flash-lite');
 
 // Ollama:
 //export const model = ollama('llama3.2:3b');
 //export const model = ollama('gpt-oss');
+
+// Minimax:
+//export const model = minimax('minimax-m3.1-flash');
+//export const model = minimax('minimax-m3');
+
 

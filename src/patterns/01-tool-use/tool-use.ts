@@ -9,7 +9,7 @@
 
 import { generateText, tool, stepCountIs } from 'ai';
 import { z } from 'zod';
-import { createTracer, model } from '../../helpers/index.js';
+import { model, createTracer } from '../../helpers/index.js';
 
 // ---------------------------------------------------------------------------
 //  LA "BASE DE DATOS" — datos que el modelo no puede conocer
@@ -75,7 +75,7 @@ async function withoutTools() {
   const tracer = createTracer('sin-herramientas');
 
   const { text } = await generateText({
-    model,
+    model: model,
     prompt: QUESTION,
     onStepEnd: tracer.onStepFinish,
   });
@@ -157,7 +157,7 @@ async function withTools() {
   const tracer = createTracer('con-herramientas');
 
   const { text } = await generateText({
-    model,
+    model: model,
     prompt: QUESTION,
     tools: {
       findCourses,
