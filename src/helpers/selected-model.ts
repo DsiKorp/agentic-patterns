@@ -24,7 +24,7 @@ import { google } from '@ai-sdk/google';
 // npm i ollama-ai-provider-v2
 // A diferencia de los anteriores, este es un proveedor comunitario.
 import { ollama } from 'ollama-ai-provider-v2';
-
+///////////////////////////////////////////////////////////77
 // Groq:
 //export const model = groq('openai/gpt-oss-20b');
 // export const model = groq('openai/gpt-oss-120b');
