@@ -40,14 +40,14 @@ import { minimax } from '@ai-sdk/minimax';
 //export const model = openai('gpt-5-mini');
 
 // Gemini:
-export const model = google('gemini-3.1-flash-lite');
+//export const model = google('gemini-3.1-flash-lite');
 
 // Ollama:
 //export const model = ollama('llama3.2:3b');
 //export const model = ollama('gpt-oss');
 
 // Minimax:
-//export const model = minimax('minimax-m3.1-flash');
+export const model = minimax('minimax-m3.1-flash');
 //export const model = minimax('minimax-m3');
 
 
